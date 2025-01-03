@@ -6,5 +6,19 @@
   "action": {
     "default_popup": "hello.html",
     "default_icon": "icon.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://race.netkeiba.com/race/shutuba_past.html?*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*", "*.css"],
+      "matches": ["https://race.netkeiba.com/*"]
+    }
+  ]
 }
